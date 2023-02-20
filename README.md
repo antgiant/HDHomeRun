@@ -8,3 +8,4 @@ To use it
 3. Align antenna to optimal angles.
 
 Note: This is running locally on your devices and sends no data back to any server.
+It is just regularly refreshing [hdhomerun.local](http://hdhomerun.local)
