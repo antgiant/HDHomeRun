@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HDHomeRun Tuner Tester</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+    <h1>HDHomeRun Tuner Tester</h1>
+    <h2>Directions</h2>
+    <ol>
+      <li>Connect tuners to seperate channela.</li>
+      <li>Use the Signal Strength for a rough idea of direction, but align the antenna for the highest Signal Quality, ignoring Signal Strength.</li>
+      <ul>
+        <li>When aimed correctly, Symbol Quality will show 100%, indicating no errors in the output.</li>
+        <li>A signal strength of 90% or higher is recommended for QAM operation, 80% minimum.</li>
+        <li>A signal strength of 80% or higher is recommended for OTA operation, 60% minimum.</li>
+      </ul>
+    </p>
+  </header>
+
+  <section style="width: 100%; display: flow-root;">
+    <div style="display: block; width: 380px; float: left;">
+        <h2>Tuner 0</h2>
+        <iframe src="http://hdhomerun.local/tuners.html?page=tuner0" width="375px" height="470px" id="tuner0"></iframe>
+    </div>
+    <div style="display: block; width: 380px; float: left;">
+        <h2>Tuner 1</h2>
+        <iframe src="http://hdhomerun.local/tuners.html?page=tuner1" width="375px" height="470px" id="tuner1"></iframe>
+    </div>
+    <div style="display: block; width: 380px; float: left;">
+        <h2>Tuner 2</h2>
+        <iframe src="http://hdhomerun.local/tuners.html?page=tuner2" width="375px" height="470px" id="tuner2"></iframe>
+    </div>
+    <div style="display: block; width: 380px; float: left;">
+        <h2>Tuner 3</h2>
+        <iframe src="http://hdhomerun.local/tuners.html?page=tuner3" width="375px" height="470px" id="tuner3"></iframe>
+    </div>
+    
+  </section>
+
+  <footer style="width: 100%;">  
+    <article>
+      <h3>
+        There are three percentages reported by the HDHomeRun
+      </h3>
+        
+      <p>
+        <strong>Signal Strength (ss)</strong>
+      </p>
+      <ul>
+        <li><div> raw power level as measured by the receiver</div>
+        </li>
+      </ul>
+        
+      <p>
+        <strong>Signal Quality (snq)</strong>
+      </p>
+      <ul>
+        <li><div> how clearly defined the digital data is</div>
+        </li>
+      </ul>
+        
+      <p>
+        <strong>Symbol Quality (seq)</strong>
+      </p>
+      <ul>
+        <li><div> Amount of correct or corrected data over the last second</div>
+        </li>
+      </ul>
+        
+      <p>
+        The above definitions can be confusing, so a much simpler definition is to imagine listening to the radio:
+      </p>
+      <ul>
+        <li><div> Signal Strength represents the volume</div>
+        </li>
+        <li><div> Signal Quality represents how clearly you can hear the lyrics</div>
+        </li>
+        <li><div> Symbol Quality indicates the percentage of the lyrics you could hear or guess correctly</div>
+        </li>
+      </ul>
+        
+      <p>
+        As it turns out, Signal Strength is somewhat irrelevant; if your antenna isn&#039;t pointed properly, it doesn&#039;t matter how loud you turn up the volume, the static will prevent you from hearing the lyrics correctly. Similarly, amplifying a weak HDTV signal can result in a high signal strength but too much noise to decode the digital data correctly.
+      </p>
+        
+      <p>
+        Use the Signal Strength for a rough idea of direction, but align the antenna for the highest Signal Quality, ignoring Signal Strength. When aimed correctly, Symbol Quality will show 100%, indicating no errors in the output. Splitters and amplifiers can introduce noise which will lower the Signal Quality, even if the Signal Strength increases.
+      </p>
+      <p>
+        <a href="https://info.hdhomerun.com/info/troubleshooting:signal_strength_quality">Source</a>
+      </p>
+    </article>
+    <article>
+      <p>
+        To split a signal more than 4 ways a distribution amplifier is recommended.<br>
+        <a href="https://info.hdhomerun.com/info/troubleshooting:cables_terminators_splitters">Source</a>
+      </p>
+    </article>  
+
+  </footer>
+
+  <script>
+    setInterval(function () {
+        document.getElementById('tuner0').src = document.getElementById('tuner0').src;
+        document.getElementById('tuner1').src = document.getElementById('tuner1').src;
+        document.getElementById('tuner2').src = document.getElementById('tuner2').src;
+        document.getElementById('tuner3').src = document.getElementById('tuner3').src;
+    }, 1000);
+  </script>
+</body>
+</html>
